@@ -1,0 +1,195 @@
+.menu {
+    list-style-type: none;
+    display: flex;
+    /* flex - elastyczny, elastyczne ułożenie elementów w linii */
+    justify-content: space-between;
+    /* wyśrodkowanie elementów w poziomie */
+    padding: 0.7rem 3rem;
+    font-size: 1.3rem;
+    ;
+    font-weight: bolder;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.imageContainer {
+    background-image: url("img/baner.jpg");
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    /* idealne wyposrodowanie headera*/
+    padding: 2rem;
+    /* rem to jednostka miary w CSS, 1rem = 16px */
+    border-radius: 2rem;
+    /* zaokrąglenie rogów */
+    border-bottom: 4px solid rgba(216, 119, 203, 0.8);
+    display: inline-block;
+
+}
+
+.header2 {
+    text-align: center;
+    background-color: thistle;
+    color: rgba(63, 56, 61, 0.938);
+    font-size: 2.5rem;
+    margin-top: 4rem;
+}
+
+
+.mainSection {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.card {
+    display: flex;
+    gap: 8rem;
+    margin-top: 6rem;
+    padding: 3rem;
+}
+
+.card img {
+    border-radius: 2rem;
+}
+
+.card-reverse {
+    flex-direction: row-reverse;
+    background-color: rgb(238, 236, 236);
+}
+
+.textContainer h3 {
+    font-size: 2rem;
+}
+
+.textContainer p {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.textContainer a {
+    text-decoration: none;
+    background: rgb(255, 153, 241);
+    color: beige;
+    padding: 0.5rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    border-radius: 2rem;
+}
+
+.textContainer a:hover {
+    /* efekt po najechaniu myszką */
+    background: rgb(216, 119, 203, 0.8);
+    color: black;
+    transition: 0.6s;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: rgb(255, 236, 245);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #e91e63;
+}
+
+.footer {
+    background-color: rgba(80, 79, 79, 0.733);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+.kontaktSection {
+    background-color: #dfd1de;
+    padding: 3rem;
+    text-align: center;
+}
+
+.kontaktSection h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.kontaktSection a {
+    color: rgb(186, 48, 150);
+    text-decoration: underline;
+}
+.mapka {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.mapka h2 {
+    margin-bottom: 2rem;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+html {
+    scroll-behavior: smooth;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .card {
+        flex-direction: column !important;
+        gap: 2rem;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .map-container iframe {
+        width: 100% !important;
+        height: 300px !important;
+    }
+}
